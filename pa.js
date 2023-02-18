@@ -5,6 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let ArrayPassword = []
 let contador = 0;
 
 function Main(){
@@ -16,11 +17,18 @@ function Main(){
             //slide 2
             for(var i = 0; i < ArrayPassword.length; i++) {
                 
+                //criar lista de senhas maiores ou do mesmo tamanho que a atual
                 if(ArrayPassword[i].length >= password.length){
 
                     let senha = [];
 
-                    senha.push(ArrayPassword[i]);  
+                    //não colocar a propria palavra da lista
+                    if(i != ArrayPassword.indexOf(password)){
+                        senha.push(ArrayPassword[i]);  
+
+                        //test
+                        console.log(`as senhas maiores que ${password} são: ${senha}`)
+                    }
 
                 }
             }

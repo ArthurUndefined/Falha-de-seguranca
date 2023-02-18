@@ -5,6 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let ArrayPassword = []
 let contador = 0;
 
 function Main(){
